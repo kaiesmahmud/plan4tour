@@ -42,7 +42,7 @@
     let discoverLinksStyle="hover:underline hover:texts-white/90 transition-all ease-in"
 </script>
 
-<div class="relative flex flex-col items-center justify-center p-5 bg-slate-900 text-white/90 overflow-hidden">
+<div class="relative w-screen flex flex-col items-center justify-center p-5 bg-slate-900 text-white/90 overflow-hidden">
     <div class='absolute w-[100px] h-[200px] md:w-[200px] md:h-[200px] gradient-04 opacity-50 md:opacity-30 top-10 right-0 gradient-animation' />
     <div class="w-full flex flex-col lg:flex-row  gap-3 ">
         <div class=" capitalize flex flex-col md:flex-row  w-full lg:w-1/2">
@@ -51,8 +51,8 @@
                 <div class="flex flex-col gap-4 p-3 md:-5">
                     <a href="/" class={discoverLinksStyle}>Home</a>
                     <a href="/" class={discoverLinksStyle}>Hotels</a>
-                    <a href="/" class={discoverLinksStyle}>Places</a>
-                    <a href="/" class={discoverLinksStyle}>blogs</a>
+                    <a href="/" class={discoverLinksStyle}>Touring Places</a>
+                    <a href="/" class={discoverLinksStyle}>Travel Tickets</a>
                 </div>
             </div>
             <div class=" block w-full md:w-1/2  md:border-l pl-5 my-5">

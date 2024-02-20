@@ -5,9 +5,17 @@
 @tailwind utilities;
 
 body{
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Fira Sans", sans-serif;   
+  
+  /* ScrollBar------Hiden------  */
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
 
 .hero-bg{
   background-image: url('https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');

@@ -54,7 +54,7 @@
         },
     ]
 </script>
-<div class="flex flex-col items-center justify-center">
+<div class="flex flex-col items-center justify-center mt-3">
     <div class=" relative w-full lg:w-[80%] ">
         <section class="min-h-[80vh] w-full p-5">
             <div class="w-10 aspect-square bg-green-600 rounded flex items-center justify-center"><div class="w-5 rounded-full bg-red-500 aspect-square"></div></div>
@@ -101,7 +101,7 @@
                            >
                            {#each specialOffers as {name,price,location,imgUrl}}
                            <SplideSlide>
-                               <div class=" max-w-[220px] px-3">
+                               <div class=" max-w-[220px] px-3 h-full">
                                    <p class="font-semibold">{name}</p>
                                    <p class="text-xs flex text-black/50">
                                        <span class=" text-lg">

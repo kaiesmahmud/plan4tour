@@ -1,7 +1,9 @@
 <script>
-    import Hero from "../lib/components/Hero.svelte";
+    import Faq from "../lib/components/Faq.svelte";
+import Hero from "../lib/components/Hero.svelte";
     import HotelsForBooking from "../lib/components/HotelsForBooking.svelte";
     import PopularTouringPlaces from "../lib/components/PopularTouringPlaces.svelte";
+    import TravelTickets from "../lib/components/TravelTickets.svelte";
 
 
 </script>
@@ -14,3 +16,5 @@
 </div>
 <PopularTouringPlaces/>
 <HotelsForBooking/>
+<TravelTickets/>
+<Faq/>
