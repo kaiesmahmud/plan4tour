@@ -2,33 +2,10 @@
     import { Splide, SplideSlide } from '@splidejs/svelte-splide';
     // Default theme
     import '@splidejs/svelte-splide/css';
-    const places = [
-        {
-            name:"Aquaholic Tourist Caravan", 
-            url:"/",
-            imgUrl: "https://gozayaan.sgp1.digitaloceanspaces.com/media/tour_management/pictures/upload/9cbefe74-7cf9-44ab-ba3c-4f7c598991ad.jpg",
-        },
-        {
-            name:"Aquaholic Tourist Caravan",
-            url:"/",
-            imgUrl: "https://gozayaan.sgp1.digitaloceanspaces.com/media/tour_management/pictures/upload/9cbefe74-7cf9-44ab-ba3c-4f7c598991ad.jpg",
-        },
-        {
-            name:"Aquaholic Tourist Caravan",
-            url:"/",
-            imgUrl: "https://gozayaan.sgp1.digitaloceanspaces.com/media/tour_management/pictures/upload/9cbefe74-7cf9-44ab-ba3c-4f7c598991ad.jpg",
-        },
-        {
-            name:"Aquaholic Tourist Caravan",
-            url:"/",
-            imgUrl: "https://gozayaan.sgp1.digitaloceanspaces.com/media/tour_management/pictures/upload/9cbefe74-7cf9-44ab-ba3c-4f7c598991ad.jpg",
-        },
-        {
-            name:"Aquaholic Tourist Caravan",
-            url:"/",
-            imgUrl: "https://gozayaan.sgp1.digitaloceanspaces.com/media/tour_management/pictures/upload/9cbefe74-7cf9-44ab-ba3c-4f7c598991ad.jpg",
-        },
-    ]
+    
+    import { hotels } from './../constants/hotels'
+  
+    
 </script>
 <div class="flex flex-col items-center justify-center p-5"> 
     <section class="w-full lg:w-[80%] ">
@@ -72,7 +49,7 @@
                aria-label="Brands We worked together"
                class=" w-[100%] z-50  "
                >
-               {#each places as {name,url,imgUrl}}
+               {#each hotels as {name,url,imgUrl}}
                <SplideSlide    >
                    <div class="m-2 md:m-3 max-w-[300px] rounded-xl shadow-xl  overflow-hidden  ">
                         <img class="object-fill aspect-video  " src={imgUrl} alt={name}>
