@@ -1,5 +1,6 @@
 <script>
-    import { hotels } from "../../lib/constants/hotels";
+    import HotelCard from "../../lib/components/HotelCard.svelte";
+import { hotels } from "../../lib/constants/hotels";
 
     const facilities = [
         {
@@ -44,73 +45,13 @@
     ]
 </script>
 <div class="flex items-center justify-center flex-col p-5 bg-indigo-100/50">
-    <h1 class="text-2xl md:text-3xl lg:text-5xl font-extrabold p-5 md:p-10 text-center w-[90%] md:w-[80%] rounded bg-blue-200 ">
+    <h1 class="text-2xl md:text-3xl lg:text-5xl font-extrabold p-5 md:p-10 text-center w-[90%] lg:w-[80%] rounded bg-blue-200 ">
         Choose Hotels <br> According Need
     </h1>
-    <div class="flex flex-col gap-4 items-center w-[90%] md:w-[80%] my-5 ">
+    <div class="flex flex-col gap-4 items-center w-[90%] lg:w-[80%] my-5 ">
 
-        {#each hotels as {name, url,imgUrl}}
-             <div class="w-full lg:w-[80%] flex flex-col md:flex-row shadow-lg rounded-lg overflow-hidden bg-white ">
-               <div class="w-full lg:w-1/3 flex items-center justify-center">
-                <img class=" w-full" src={imgUrl} alt={name} >
-               </div>
-               <div class="w-2/3 p-2 flex flex-col md:flex-row ">
-                    <div class="w-full lg:w-2/3">
-                        <h3 class="font-bold text-lg lg:text-xl">MIRACLE TRANSIT HOTEL</h3>
-                        <p class="text-xs lg:text-sm text-black/70 font-light w-[90%] flex ">
-                            <span class="mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...$$props}>
-                                    <path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7" />
-                                </svg>
-                            </span>
-                             3rd Floor, International Departure Hall, Concourse A, Suvarnabhumi Airport. Bangkok
-                        </p>
-                        <div class="flex  flex-wrap py-2 w-[90%] gap-1">
-                            {#each facilities as {name,icon}}
-                                 <p class="text-xs flex  items-center gap-1 capitalize font-light px-2 py-1 border border-cyan-400 rounded">
-                                    <span>{@html icon }</span>
-                                    <span>{ name }</span>
-                                 </p>
-                            {/each}
-                        </div>
-                        <p class="text-black/80 font-light">The Miracle Transit Hotel offers you the possibility to book a room from 4 to 12 hours.</p>
-                    </div>
-                    <div class="w-full lg:w-1/3 flex flex-col  md:items-end p-3">
-                        <p>Hotel Reviews </p>
-                        <p class="flex">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 64 64" {...$$props}>
-                                <path fill="#ffce31" d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 64 64" {...$$props}>
-                                <path fill="#ffce31" d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 64 64" {...$$props}>
-                                <path fill="#ffce31" d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 64 64" {...$$props}>
-                                <path fill="#ffce31" d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 64 64" {...$$props}>
-                                <path fill="#ffce31" d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z" />
-                            </svg>
-                            <span>
-                                (132)
-                            </span>
-                        </p>
-
-                        <div class=" text-center">
-                            <p class="font-bold">Price Starts At</p>
-                            <p class="text-red-500 text-lg font-semibold">BDT 12,345 </p>
-                            <p class="  line-through">BDT 12,345 </p>
-                        </div> 
-                        <div class="flex lg:flex-col gap-2 text-center ">
-
-                            <a href="/" class="border shadow bg-green-500 px-3 py-2   rounded-lg hover:bg-green-600">Call Now</a> 
-                            <a href="/" class="border shadow bg-blue-500 px-3 py-2   rounded-lg hover:bg-sky-600">View Details</a> 
-                        </div>
-                    </div>
-               </div>
-             </div>
+        {#each hotels as hotel}
+             <HotelCard {hotel}/>
         {/each}
     </div>
 </div>
