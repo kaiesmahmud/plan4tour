@@ -47,16 +47,16 @@
     <div class="w-full flex flex-col lg:flex-row  gap-3 ">
         <div class=" capitalize flex flex-col md:flex-row  w-full lg:w-1/2">
             <div class=" block w-full md:w-1/2 pl-5 my-5">
-                <h3>Discover</h3>
+                <h3 class="font-bold text-lg">Discover</h3>
                 <div class="flex flex-col gap-4 p-3 md:-5">
                     <a href="/" class={discoverLinksStyle}>Home</a>
-                    <a href="/" class={discoverLinksStyle}>Hotels</a>
-                    <a href="/" class={discoverLinksStyle}>Touring Places</a>
-                    <a href="/" class={discoverLinksStyle}>Travel Tickets</a>
+                    <a href="/hotel-booking" class={discoverLinksStyle}>Hotels</a>
+                    <a href="/touring-places" class={discoverLinksStyle}>Touring Places</a>
+                    <a href="/travel-tickets" class={discoverLinksStyle}>Travel Tickets</a>
                 </div>
             </div>
             <div class=" block w-full md:w-1/2  md:border-l pl-5 my-5">
-                <h3>Payment Methods</h3>
+                <h3 class="font-bold text-lg">Payment Methods</h3>
                 <div class=" inline-block">
                     <div class="grid grid-cols-3 gap-y-1  gap-x-3">
                         {#each paymentsimg as img }
@@ -68,7 +68,7 @@
         </div>
         <div class=" capitalize flex flex-col md:flex-row w-full lg:w-1/2">
             <div  class=" block w-full md:w-2/3 pl-5 my-5">
-                <h3>Contact</h3>
+                <h3 class="font-bold text-lg">Contact</h3>
                 <div class="flex flex-col gap-3 my-5 lowercase">
                     <a href="mailto:plan4tour.com@gmail.com">plan4tour.com@gmail.com</a>
                     <a href="tel:+8801846576185">+8801846576185</a>
@@ -95,7 +95,7 @@
                 </div>
             </div>
             <div  class=" block w-full md:w-1/3 pl-5 md:border-l my-5">
-                <h3>Need Help?</h3>
+                <h3 class="font-bold text-lg">Need Help?</h3>
                 <p class="p-5">We are Always here for you! Knock us on Messenger anytime or Call our Hotline (10AM - 10PM).</p>
             </div>
         </div>
