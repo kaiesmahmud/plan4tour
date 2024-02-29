@@ -1,6 +1,6 @@
 export let navList = [
-    {link:"/", name: "hotels"},
-    {link:"/", name: "Touring place"},
-    {link:"/", name: "travel tickets"},
-    {link:"/", name: "about"},
+    {link:"/hotel-booking", name: "hotels"},
+    {link:"/touring-places", name: "Touring place"},
+    {link:"/travel-tickets", name: "travel tickets"},
+    {link:"/about", name: "about"},
 ]
