@@ -14,7 +14,7 @@
         </div>
         <div class="md:p-5">
             <Splide options={ {
-                type   : 'loop',
+                // type   : 'loop',
                 // rewind: true,
                 gap   : '1rem',
                 autoplay:true,
