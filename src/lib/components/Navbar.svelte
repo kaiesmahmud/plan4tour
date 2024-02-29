@@ -28,7 +28,7 @@
         {#each navList as {link,name}}
         <div class="flex rounded overflow-hidden" >
             <a on:click={handleViewNavOptions} href={link} class="fira-sans-semibold rounded transition-all ease-in duration-300 w-full lg:w-auto hover:text-green-600">
-                <p class="p-3 rounded nav_gradient">{name}</p>
+                <p class="p-3 rounded nav_gradient text-lg">{name}</p>
             </a>
         </div>
         {/each}
