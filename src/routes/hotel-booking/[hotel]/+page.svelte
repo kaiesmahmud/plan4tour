@@ -1,4 +1,5 @@
 <script>
+    import Faq from "../../../lib/components/Faq.svelte";
     import SlidingImages from "../../../lib/components/SlidingImages.svelte";
 
 
@@ -8,5 +9,5 @@
         Hotel Description
     </div>
     <SlidingImages/>
-
+    <Faq/>
 </main>
