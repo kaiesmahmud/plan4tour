@@ -18,10 +18,9 @@
                 // rewind: true,
                 gap   : '1rem',
                 autoplay:true,
-                arrows:false,
                 interval: 3000, // Set the duration to 1000ms (1 second)
                 // autoWidth:true,
-                wheel    : true,
+                // wheel    : true,
                 perPage: 4,
                 pagination:false,
                 drag   : 'free',
@@ -29,18 +28,15 @@
                 autoScroll: {
                   speed: 1,
                 },
-                 
                 breakpoints: {
-                    640:{
-                         
+                    640:{ 
+                        arrows:false,
                         autoWidth:true,
                     },
-                    1020:{
-                        
+                    1020:{ 
                         autoWidth:true,
                     },
-                    1520:{
-                        
+                    1520:{                        
                         autoWidth:true,
                     }
                 }
