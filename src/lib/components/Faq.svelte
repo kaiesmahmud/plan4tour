@@ -31,8 +31,8 @@
     } 
 </script>
 
-<div class="flex items-center justify-center   p-5 ">
-    <section class="w-full  p-2 lg:w-[75%] flex flex-col items-center justify-center  bg-gradient-to-r from-sky-500 to-teal-500 rounded-xl my-10">
+<div class="flex items-center justify-center   md:p-5 ">
+    <section class="w-full  p-2 lg:w-[75%] flex flex-col items-center justify-center  bg-gradient-to-r from-sky-500 to-teal-500 md:rounded-xl md:my-10">
         <div class="w-full md:w-[90%] lg:w-[70%] flex flex-col gap-5 pb-5">
             <h3 class="text-2xl md:text-3xl lg:text-4xl   p-5 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-900 to-cyan-800 text-center">Frequently Asked Questions</h3>
             {#each faqData as {id,ques,ans}}
