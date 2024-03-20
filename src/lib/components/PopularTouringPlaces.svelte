@@ -1,34 +1,10 @@
 <script>
+	import { touringPlaces } from './../constants/touringPlaces.js';
     import { Splide, SplideSlide } from '@splidejs/svelte-splide';
     // Default theme
     import '@splidejs/svelte-splide/css';
-    const places = [
-        {
-            name:"Aquaholic Tourist Caravan", 
-            url:"/",
-            imgUrl: "https://gozayaan.sgp1.digitaloceanspaces.com/media/tour_management/pictures/upload/9cbefe74-7cf9-44ab-ba3c-4f7c598991ad.jpg",
-        },
-        {
-            name:"Aquaholic Tourist Caravan",
-            url:"/",
-            imgUrl: "https://gozayaan.sgp1.digitaloceanspaces.com/media/tour_management/pictures/upload/9cbefe74-7cf9-44ab-ba3c-4f7c598991ad.jpg",
-        },
-        {
-            name:"Aquaholic Tourist Caravan",
-            url:"/",
-            imgUrl: "https://gozayaan.sgp1.digitaloceanspaces.com/media/tour_management/pictures/upload/9cbefe74-7cf9-44ab-ba3c-4f7c598991ad.jpg",
-        },
-        {
-            name:"Aquaholic Tourist Caravan",
-            url:"/",
-            imgUrl: "https://gozayaan.sgp1.digitaloceanspaces.com/media/tour_management/pictures/upload/9cbefe74-7cf9-44ab-ba3c-4f7c598991ad.jpg",
-        },
-        {
-            name:"Aquaholic Tourist Caravan",
-            url:"/",
-            imgUrl: "https://gozayaan.sgp1.digitaloceanspaces.com/media/tour_management/pictures/upload/9cbefe74-7cf9-44ab-ba3c-4f7c598991ad.jpg",
-        },
-    ]
+    
+    
 </script>
 <div class="flex flex-col items-center justify-center p-5"> 
     <section class="w-full lg:w-[80%] ">
@@ -40,10 +16,9 @@
                 // rewind: true,
                 gap   : '1rem',
                 autoplay:true,
-                arrows:false,
                 interval: 3000, // Set the duration to 1000ms (1 second)
                 // autoWidth:true,
-                wheel    : true,
+                // wheel    : true,
                 perPage: 4,
                 type   : 'loop',
                 pagination:false,
@@ -52,17 +27,19 @@
                 autoScroll: {
                   speed: 1,
                 },
+                // padding: '100px',
+                
                 breakpoints: {
-                    640:{
-                         
+                    640:{ 
+                        arrows:false,
                         autoWidth:true,
                     },
                     1020:{
-                        
+                        arrows: true,
                         autoWidth:true,
                     },
-                    1520:{
-                        
+                    1520:{ 
+                        arrows: true,
                         autoWidth:true,
                     }
                 }
@@ -71,7 +48,7 @@
                aria-label="Brands We worked together"
                class=" w-[100%] z-50"
                >
-               {#each places as {name,url,imgUrl}}
+               {#each touringPlaces as {name,url,imgUrl}}
                <SplideSlide>
                    <div class=" max-w-[320px] relative group rounded-xl bg-slate-900/50 overflow-hidden">
                        <p class="z-[50] absolute top-0 w-full bg-sky-900/20 text-slate-900 font-extrabold text-lg p-1 px-2 ">{name}</p>

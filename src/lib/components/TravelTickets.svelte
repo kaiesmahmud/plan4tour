@@ -1,34 +1,10 @@
 <script>
+	import { travelTickets } from './../constants/travelTickets.js';
     import { Splide, SplideSlide } from '@splidejs/svelte-splide';
     // Default theme
     import '@splidejs/svelte-splide/css';
-    const places = [
-        {
-            name:"Aquaholic Tourist Caravan", 
-            url:"/",
-            imgUrl: "https://plus.unsplash.com/premium_photo-1661713771405-09e2b484fdc8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dG91ciUyMGJ1c3xlbnwwfHwwfHx8MA%3D%3D",
-        },
-        {
-            name:"Aquaholic Tourist Caravan",
-            url:"/",
-            imgUrl: "https://plus.unsplash.com/premium_photo-1661713771405-09e2b484fdc8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dG91ciUyMGJ1c3xlbnwwfHwwfHx8MA%3D%3D",
-        },
-        {
-            name:"Aquaholic Tourist Caravan",
-            url:"/",
-            imgUrl: "https://plus.unsplash.com/premium_photo-1661713771405-09e2b484fdc8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dG91ciUyMGJ1c3xlbnwwfHwwfHx8MA%3D%3D",
-        },
-        {
-            name:"Aquaholic Tourist Caravan",
-            url:"/",
-            imgUrl: "https://plus.unsplash.com/premium_photo-1661713771405-09e2b484fdc8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dG91ciUyMGJ1c3xlbnwwfHwwfHx8MA%3D%3D",
-        },
-        {
-            name:"Aquaholic Tourist Caravan",
-            url:"/",
-            imgUrl: "https://plus.unsplash.com/premium_photo-1661713771405-09e2b484fdc8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dG91ciUyMGJ1c3xlbnwwfHwwfHx8MA%3D%3D",
-        },
-    ]
+     
+    
 </script>
 <div class="flex flex-col items-center justify-center p-5"> 
     <section class="w-full lg:w-[80%] ">
@@ -38,14 +14,14 @@
         <div class="md:p-5">
             <Splide options={ {
                 
-                // type   : 'loop',
-                // rewind: true,
+                type   : 'loop',
+                rewind: false,
                 gap   : '1rem',
                 autoplay:true,
-                arrows:false,
+                
                 interval: 3000, // Set the duration to 1000ms (1 second)
                 // autoWidth:true,
-                wheel    : true,
+                // wheel    : true,
                 perPage: 4,
                 pagination:false,
                 drag   : 'free',
@@ -56,7 +32,7 @@
                  
                 breakpoints: {
                     640:{
-                         
+                        arrows:false,
                         autoWidth:true,
                     },
                     1020:{
@@ -73,7 +49,7 @@
                aria-label="Brands We worked together"
                class=" w-[100%] z-50  "
                >
-               {#each places as {name,url,imgUrl}}
+               {#each travelTickets as {name,url,imgUrl}}
                <SplideSlide    >
                    <div class="m-2 md:m-3 max-w-[300px] min-h-[200px] rounded-xl shadow-xl  overflow-hidden flex   ">
                         <img class="w-1/2 object-fill aspect-video  " src={imgUrl} alt={name}>
