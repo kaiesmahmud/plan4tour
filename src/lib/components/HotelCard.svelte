@@ -5,12 +5,16 @@
 
 </script>
 <div class="w-full lg:w-[80%] flex flex-col md:flex-row shadow-lg rounded-lg overflow-hidden bg-white ">
-    <div class="w-full md:w-1/3 flex items-center justify-center">
-     <img class=" w-full" src={hotel.imgUrl} alt={hotel.name} >
+    <div class="w-full md:w-1/3 flex items-center justify-center object-cover">
+     <img class=" h-full " src={hotel.imgUrl} alt={hotel.name} >
     </div>
-    <div class="w-full md:w-2/3 p-2 flex flex-col md:flex-row ">
-         <div class="w-full lg:w-2/3">
+    <div class="w-full  lg:w-2/3 p-2 flex flex-col md:flex-row ">
+         <div class="w-full   md:w-2/3 p-2 lg:p-5">
              <h3 class="font-bold text-lg lg:text-xl">{hotel.name}</h3>
+             <div class="flex items-center gap-1 text-lg lg:text-xl">
+                 <RateStar rate={hotel?.rate} />
+            </div>
+            <br>
              {#if hotel?.location}
                  <p class="text-xs lg:text-sm text-black/70 font-light w-full md:w-[90%] flex ">
                      <span class="mt-1">
@@ -30,19 +34,12 @@
                           </p>
                      {/each}
                  </div>
-             {/if}
-             {#if hotel?.description}
-                 <p class="text-black/80 font-light">{hotel.description}</p>
-             {/if}
+             {/if} 
          </div>
-         <div class="w-full lg:w-1/3 flex flex-col items-center  p-1 text-center">
-             <p>Hotel Reviews </p>
-             <p class="flex">
-                <RateStar rate={hotel?.rate} />
-                <span> ({hotel?.reviews}) </span>
-             </p>
+         <div class="w-full   md:w-1/3 flex flex-col items-center justify-center p-1 text-center">
+             
              <div class=" text-center">
-                 <p class="">Price Starts At</p>
+                 <!-- <p class="">Price Starts At</p> -->
                  <p class="text-red-500 text-lg font-semibold">BDT {hotel.offerPrice} </p>
                  <p class="  line-through text-black/80">BDT {hotel?.regularPrice} </p>
                  <p class="">{hotel?.discount} Discount</p>
