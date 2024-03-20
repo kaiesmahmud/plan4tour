@@ -101,20 +101,24 @@
                            >
                            {#each specialOffers as {name,price,location,imgUrl}}
                            <SplideSlide>
-                               <div class=" max-w-[220px] px-3 h-full">
-                                   <p class="font-semibold">{name}</p>
-                                   <p class="text-xs flex text-black/50">
-                                       <span class=" text-lg">
-                                           <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...$$props}>
-                                               <path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7" />
-                                           </svg>
-                                       </span>
-                                       {location}</p>
-                                   <img class="rounded object-fill aspect-video" src={imgUrl} alt={name}>
-                                   <div class="flex justify-between items-center p-2">
-                                       <p class="text-xs px-3 py-2 bg-slate-900  text-white rounded-full" >Contact Now</p>
-                                       <p class="text-sm">BDT {price}</p>
-                                   </div>
+                               <div class=" max-w-[220px] px-3 h-full flex flex-col justify-between">
+                                    <div>
+                                        <p class="font-semibold">{name}</p>
+                                        <p class="text-xs flex text-black/50">
+                                            <span class=" text-lg">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...$$props}>
+                                                    <path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7" />
+                                                </svg>
+                                            </span>
+                                            {location}</p>
+                                    </div>
+                                    <div>
+                                        <img class="rounded object-fill aspect-video" src={imgUrl} alt={name}>
+                                        <div class="flex justify-between items-center p-2">
+                                            <p class="text-xs px-3 py-2 bg-slate-900  text-white rounded-full" >Contact Now</p>
+                                            <p class="text-sm">BDT {price}</p>
+                                        </div>
+                                    </div>
                                </div>
                            </SplideSlide>
                            {/each}
