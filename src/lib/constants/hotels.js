@@ -2,8 +2,6 @@ export  const hotels = [
     {
         name:"MIRACLE TRANSIT HOTEL Caravan", 
         location:'3rd Floor, International Departure Hall, Concourse A, Suvarnabhumi Airport. Bangkok',
-        description: 'The Miracle Transit Hotel offers you the possibility to book a room from 4 to 12 hours.',
-        reviews : '123',
         rate: 4,
         regularPrice: "12,121",
         offerPrice: "11,121",
@@ -72,8 +70,6 @@ export  const hotels = [
     {
         name:"MIRACLE TRANSIT HOTEL Caravan", 
         location:'3rd Floor, International Departure Hall, Concourse A, Suvarnabhumi Airport. Bangkok',
-        description: 'The Miracle Transit Hotel offers you the possibility to book a room from 4 to 12 hours.',
-        reviews : '23',
         rate: 2,
         regularPrice: "2,121",
         offerPrice: "1,121",
